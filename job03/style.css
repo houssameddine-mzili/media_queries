@@ -1,0 +1,33 @@
+/* Style de base pour les sections */
+section {
+    background-color: #88c1d0;
+    margin: 10px;
+    height: 100px; /* Exemple de hauteur */
+    width: calc(25% - 20px); /* Ajuster selon la marge */
+    float: left;
+}
+
+/* Effacer le float sur les sections */
+body::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Media queries pour adapter la mise en page en fonction de la largeur de l'écran */
+/* Pour les écrans de largeur inférieure à 767px */
+@media (max-width: 767px) {
+    section {
+        width: calc(100% - 20px); /* Prend toute la largeur avec ajustement de la marge */
+    }
+}
+
+/* Pour les écrans de largeur comprise entre 768px et 1599px */
+@media (min-width: 768px) and (max-width: 1599px) {
+    section {
+        width: calc(50% - 20px); /* Prend la moitié de la largeur avec ajustement de la marge */
+    }
+}
+
+/* Pour les écrans de largeur supérieure ou égale à 1600px, le style de base s'applique */
+

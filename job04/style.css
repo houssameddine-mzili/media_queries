@@ -1,0 +1,59 @@
+/* Style de base pour le header et la navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Style pour le bouton hamburger */
+#hamburger-btn {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Style de base pour les sections */
+section {
+    background-color: #88c1d0;
+    margin: 10px;
+    height: 100px; /* Exemple de hauteur */
+    width: calc(25% - 20px); /* Ajuster selon la marge */
+    float: left;
+}
+
+/* Media query pour les écrans de largeur inférieure ou égale à 767px */
+@media (max-width: 767px) {
+    #hamburger-btn {
+        display: block; /* Affiche le bouton hamburger */
+    }
+
+    #navbar {
+        display: none; /* Masque la barre de navigation */
+    }
+
+    #navbar.active {
+        display: block; /* Affiche la barre de navigation lorsque active */
+    }
+
+    nav ul li {
+        display: block; /* Les liens prennent toute la largeur */
+        margin: 0;
+    }
+}
